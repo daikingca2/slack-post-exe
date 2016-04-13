@@ -17,7 +17,6 @@ namespace SlackPostTest
         public string webhookurl = "";
         public string username = "";
 
-
         public bool loadJson()
         {
             bool res = true;
