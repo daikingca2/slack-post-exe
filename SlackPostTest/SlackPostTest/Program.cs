@@ -12,7 +12,11 @@ namespace SlackPostTest
     {
         static void Main(string[] args)
         {
-           string sendText = "";
+
+            string actionMsg = "";
+            string sysUsername = "ユーザー名 : " + System.Environment.UserName; 
+            string sendText = "";
+
 
             try
             {
@@ -23,17 +27,19 @@ namespace SlackPostTest
 
                     if (startupPram == "/login")
                     {
-                        sendText = "ログインシマシタ。";
+                        actionMsg = "ログインシマシタ。";
                     }
                     else
                     {
-                        sendText = "ログアウトシマシタ。";
+                        actionMsg = "ログアウトシマシタ。";
                     }
                 }
                 else
                 {
-                    sendText = "エ、ナニシタノ?";
+                    actionMsg = "エ、ナニシタノ?";
                 }
+
+                sendText = sysUsername + "\n" + actionMsg;
 
 
 
